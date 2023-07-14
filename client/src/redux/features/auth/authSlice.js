@@ -30,7 +30,7 @@ const authSlice = createSlice({
     });
     //=========== REGISTER USER
     builder.addCase(userRegister.pending, (state) => {
-      state.pending = true;
+      state.loading = true;
       state.error = null;
     });
     builder.addCase(userRegister.fulfilled, (state, { payload }) => {
@@ -43,7 +43,7 @@ const authSlice = createSlice({
     });
     //===========GET CURRENT USER
     builder.addCase(getCurrentUser.pending, (state) => {
-      state.pending = true;
+      state.loading = true;
       state.error = null;
     });
     builder.addCase(getCurrentUser.fulfilled, (state, { payload }) => {

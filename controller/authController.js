@@ -36,7 +36,7 @@ const registerController = async (req, res) => {
     console.log(error);
     res
       .status(500)
-      .send({ success: false, message: "Error In Register API", error });
+      .send({ success: false, message: "Error In Register API May You Miss Some Fields", error });
   }
 };
 

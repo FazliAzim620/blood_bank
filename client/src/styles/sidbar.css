@@ -1,0 +1,35 @@
+/* ============================= SIDEBAR */
+.sidebar{
+height: 89vh;
+background-color:#3498db;
+ border-right: 1px solid gray;
+
+}
+ 
+.menu-item{
+    padding: 0 1rem;
+    padding-top: 1rem;
+ 
+   
+    
+    }
+    .active{
+    background-color:rgb(251, 251, 251);
+    color:black ; 
+    font-weight: bold;
+    }
+    .active .a{
+    color:black !important;
+
+    
+   }
+   .a{
+    text-decoration:none;
+    color: white !important;
+    font-weight: bold;
+    display: flex;
+    }
+    .add_inventory{
+    cursor: pointer;
+    margin-bottom: 3rem;
+    }

@@ -15,7 +15,12 @@ export const userLogin = createAsyncThunk(
       if (data.success) {
         localStorage.setItem("token", data.token);
         toast.success(data.message);
-        window.location.replace('/')
+        if(data?.user?.role==='admin'){
+          window.location.replace('/')
+        }else{
+          window.location.replace(`/${data?.user?.role}`)
+        
+        }
       }
 
       return data;
@@ -60,7 +65,8 @@ export const userRegister = createAsyncThunk(
       });
       // store token
       if (!data.success) {
-        toast.danger(data.message);
+        
+        toast.error(data.message);
       }
       if (data.success) {
         toast.success(data.message);
